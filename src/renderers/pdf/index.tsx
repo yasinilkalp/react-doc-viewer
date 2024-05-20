@@ -6,7 +6,7 @@ import PDFPages from "./components/pages/PDFPages";
 import PDFControls from "./components/PDFControls";
 import { PDFProvider } from "./state";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `./pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `http://aldasteknoloji.com/scripts/pdf.worker.min.js`;
 
 const PDFRenderer: DocRenderer = ({ mainState }) => {
   return (
