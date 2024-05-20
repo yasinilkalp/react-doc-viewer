@@ -1,16 +1,16 @@
 {
-  "name": "@cyntler/react-doc-viewer",
-  "version": "1.15.0",
+  "name": "@yasinilkalp/react-doc-viewer",
+  "version": "1.15.5",
   "description": "File viewer for React.",
-  "author": "Matthew Mogford / Damian Cyntler",
+  "author": "Matthew Mogford / Damian Cyntler / Yasin ilkalp Arabacı",
   "keywords": [
     "reactjs",
     "file-viewer"
   ],
   "license": "Apache License 2.0",
-  "homepage": "https://cyntler.github.io/react-doc-viewer",
+  "homepage": "https://yasinilkalp.github.io/react-doc-viewer",
   "repository": {
-    "url": "https://github.com/cyntler/react-doc-viewer"
+    "url": "https://github.com/yasinilkalp/react-doc-viewer"
   },
   "files": [
     "dist/**"
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "storybook dev -p 6006",
-    "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
+    "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc --noEmit false",
     "build:cjs": "tsc --noEmit false --module commonjs --moduleResolution node --outDir ./dist/cjs",
     "test": "react-scripts test --watchAll=false",

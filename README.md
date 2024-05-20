@@ -1,7 +1,7 @@
-[![npm-version](https://img.shields.io/npm/v/@cyntler/react-doc-viewer.svg)](https://www.npmjs.com/package/@cyntler/react-doc-viewer)
-[![npm-download](https://img.shields.io/npm/dt/@cyntler/react-doc-viewer.svg)](https://www.npmjs.com/package/@cyntler/react-doc-viewer)
+[![npm-version](https://img.shields.io/npm/v/@yasinilkalp/react-doc-viewer.svg)](https://www.npmjs.com/package/@yasinilkalp/react-doc-viewer)
+[![npm-download](https://img.shields.io/npm/dt/@yasinilkalp/react-doc-viewer.svg)](https://www.npmjs.com/package/@yasinilkalp/react-doc-viewer)
 
-# @cyntler/react-doc-viewer
+# @yasinilkalp/react-doc-viewer
 
 File viewer for React.
 
@@ -34,16 +34,16 @@ File viewer for React.
 
 ## Storybook Demo
 
-https://cyntler.github.io/react-doc-viewer
+https://yasinilkalp.github.io/react-doc-viewer
 
 ## Installation
 
 Use one of the package managers for Node.js.
 
 ```bash
- npm i @cyntler/react-doc-viewer
+ npm i @yasinilkalp/react-doc-viewer
  # or
- yarn add @cyntler/react-doc-viewer
+ yarn add @yasinilkalp/react-doc-viewer
 ```
 
 ## Usage
@@ -56,7 +56,7 @@ DocViewer requires at least an array of document objects to function.
 Each document object must have a uri to a file, either a url that returns a file or a local file.
 
 ```tsx
-import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
+import DocViewer, { DocViewerRenderers } from "@yasinilkalp/react-doc-viewer";
 
 function App() {
   const docs = [
@@ -73,7 +73,7 @@ function App() {
 By default, the first item in your `documents` array will be displayed after the component is rendered. However, there is a prop `initialActiveDocument` that you can point to the initial document that should be displayed.
 
 ```tsx
-import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
+import DocViewer, { DocViewerRenderers } from "@yasinilkalp/react-doc-viewer";
 
 const App = () => {
   const docs = [
@@ -156,7 +156,7 @@ To use the included renderers.
 `DocViewerRenderers` is an Array of all the included renderers.
 
 ```tsx
-import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
+import DocViewer, { DocViewerRenderers } from "@yasinilkalp/react-doc-viewer";
 
 <DocViewer
   pluginRenderers={DocViewerRenderers}
@@ -167,7 +167,7 @@ import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
 Or you can import individual renderers.
 
 ```tsx
-import DocViewer, { PDFRenderer, PNGRenderer } from "@cyntler/react-doc-viewer";
+import DocViewer, { PDFRenderer, PNGRenderer } from "@yasinilkalp/react-doc-viewer";
 
 <DocViewer
   pluginRenderers={[PDFRenderer, PNGRenderer]}
@@ -181,7 +181,7 @@ To create a custom renderer, that will just exist for your project.
 
 ```tsx
 import React from "react";
-import DocViewer from "@cyntler/react-doc-viewer";
+import DocViewer from "@yasinilkalp/react-doc-viewer";
 
 const MyCustomPNGRenderer: DocRenderer = ({
   mainState: { currentDocument },
@@ -202,7 +202,7 @@ MyCustomPNGRenderer.weight = 1;
 And supply it to `pluginRenderers` inside an `Array`.
 
 ```tsx
-import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
+import DocViewer, { DocViewerRenderers } from "@yasinilkalp/react-doc-viewer";
 
 <DocViewer
   pluginRenderers={[MyCustomPNGRenderer]}
@@ -216,7 +216,7 @@ import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
 
 ### Custom File Loader
 
-If you need to prevent the actual loading of the file by `@cyntler/react-doc-viewer`.<br>
+If you need to prevent the actual loading of the file by `@yasinilkalp/react-doc-viewer`.<br>
 You can decorate your custom renderer with a callback to do as you wish. e.g. Load the file yourself in an iFrame.
 
 ```tsx
@@ -254,11 +254,11 @@ You can provide a theme object with one or all of the available properties.
 ## Custom pre-fetch HTTP Verb
 
 Some services (such as AWS) provide URLs that works only for one pre-configured verb.
-By default, `@cyntler/react-doc-viewer` fetches document metadata through a `HEAD` request in order to guess its `Content-Type`.
+By default, `@yasinilkalp/react-doc-viewer` fetches document metadata through a `HEAD` request in order to guess its `Content-Type`.
 If you need to have a specific verb for the pre-fetching, use the `prefetchMethod` option on the DocViewer:
 
 ```tsx
-import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
+import DocViewer, { DocViewerRenderers } from "@yasinilkalp/react-doc-viewer";
 
 <DocViewer prefetchMethod="GET" />;
 ```
@@ -333,7 +333,7 @@ const MyDocViewer = styled(DocViewer)`
 Since **v1.13.0** you can control the display of the document with `reference`.
 
 ```tsx
-import DocViewer, { DocViewerRef } from "@cyntler/react-doc-viewer";
+import DocViewer, { DocViewerRef } from "@yasinilkalp/react-doc-viewer";
 
 export const UsingRef = () => {
   const docViewerRef = useRef<DocViewerRef>(null);
